@@ -1,0 +1,106 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "textgrad-po"
+version = "0.2.0"
+description = "Enhanced Text-to-Image Prompt Optimization with Model Selection and Hyperparameter Tuning"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "TextGrad-PO Team", email = "team@textgrad-po.org"}
+]
+keywords = ["text-to-image", "prompt-optimization", "ai", "machine-learning", "diffusion-models"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "diffusers>=0.24.0",
+    "transformers>=4.46.0",
+    "accelerate>=0.24.0",
+    "safetensors>=0.4.0",
+    "Pillow>=10.0.0",
+    "numpy>=1.24.0",
+    "click>=8.1.0",
+    "tqdm>=4.65.0",
+    "pyyaml>=6.0",
+    "requests>=2.31.0",
+    "hpsv3>=0.1.0",
+    "ftfy",
+    "regex",
+    "clip @ git+https://github.com/openai/CLIP.git",
+    "pytorch-lightning>=2.0.0",
+    "matplotlib>=3.5.0",
+    "tensorboard>=2.20.0",
+    "hpsv2x>=1.2.0", # Using the fixed HPSv2 package
+    "litellm>=1.76.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.2.0", # Relaxed pytest version for HPSv2 compatibility
+    "pytest-cov>=4.1.0",
+    "pre-commit>=3.6.0",
+    "ruff>=0.12.9",
+]
+
+flash-attn = [
+    "flash-attn>=2.8.3",
+]
+
+
+[project.scripts]
+textgrad-po = "cli:cli"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src",
+    "/configs",
+    "/README.md",
+    "/LICENSE",
+    "/pyproject.toml",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.ruff]
+line-length = 80
+fixable = ["ALL"]
+unfixable = ["F401"]
+
+[tool.ruff.format]
+skip-magic-trailing-comma = false
+
+# isort settings via Ruff (use the lint.isort table)
+[tool.ruff.lint.isort]
+combine-as-imports = true
+force-sort-within-sections = true
+lines-after-imports = 2
+
+known-first-party = ["src", "configs"]
+known-third-party = ["numpy", "torch", "pandas", "scipy", "diffusers", "transformers", "accelerate", "safetensors", "Pillow","requests", "hpsv3", "ftfy", "regex", "clip", "pytorch-lightning", "matplotlib", "tensorboard", "hpsv2x", "litellm"]
+section-order = [
+    "future",
+    "standard-library",
+    "third-party",
+    "first-party",
+    "local-folder",
+]

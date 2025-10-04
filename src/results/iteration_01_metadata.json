@@ -1,0 +1,31 @@
+{
+  "iteration": 1,
+  "prompt_evolution": {
+    "original": "dr strange",
+    "optimized": "dr strange",
+    "changes": [],
+    "optimization_reasoning": ""
+  },
+  "orchestrator_decision": {},
+  "prompt_optimizer_result": {},
+  "scores": {
+    "individual_scores": {
+      "clip": 23.59619140625,
+      "aesthetic": 6.627490997314453
+    },
+    "combined_score": -0.4403808593749998
+  },
+  "visual_analysis": "",
+  "image_retrieval_result": "",
+  "reference_images": [],
+  "image_metadata": {
+    "size": "1024x1024",
+    "format": "PNG"
+  },
+  "timing": {
+    "generation_time": 34.455891370773315,
+    "scoring_time": 10.125639200210571,
+    "optimization_time": 0.0,
+    "total_time": 44.58153057098389
+  }
+}

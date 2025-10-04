@@ -1,0 +1,12 @@
+prompts_file: prompts/our_benchmark.jsonl
+output_root: results/our_benchmark/World2Image
+iterations: 10
+scoring:
+  - aesthetic
+  - clip
+llm_engine: azure/gpt-4o
+device: cuda
+save_intermediate: true
+start_index: 0
+limit: 
+
