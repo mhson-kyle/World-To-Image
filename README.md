@@ -10,7 +10,7 @@ This is the official repository of "[WORLD-TO-IMAGE: GROUNDING TEXT-TO-IMAGE GEN
 [Paper]() · [Code](https://github.com/mhson-kyle/World-To-Image)
 
 <div align="center">
-  <img src="assets/visuals.pdf" alt="World-To-Image" width="100%">
+  <img src="assets/visuals.png" alt="World-To-Image" width="100%">
 </div>
 <div align="center">
   <img src="assets/figure_1.png" alt="World-To-Image" width="100%">
