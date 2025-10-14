@@ -28,6 +28,13 @@ This is the official repository of "[WORLD-TO-IMAGE: GROUNDING TEXT-TO-IMAGE GEN
 4. **Orchestrator**: Orchestrates the entire optimization workflow
 5. **Pipeline**: Orchestrates the entire optimization workflow
 
+## Dataset
+You may access the NICE Benchmark dataset through the following code:
+```python
+from datasets import load_dataset  
+dataset = load_dataset("mhsonkyle/NICE")
+```
+
 ## Installation
 
 ### Prerequisites
