@@ -78,3 +78,17 @@ python run_single.py 'dr strange' --iterations 3
 python run.py \
   --config configs/config_base.yaml \
 ```
+
+## Citation
+If you find this repository useful, please consider citing:
+
+``` bibtex
+@article{Son2025World2Image,
+  title={WORLD-TO-IMAGE: Grounding Text-to-image Generation with Agent-driven World Knowledge},
+  author={Son, Moo Hyun and Oh Jintaek and Mun, Sun Bin and Roh, Jaechul and Choi, Sehyun},
+  archivePrefix={arXiv},
+  eprint={2510.04201},
+  year={2025},
+  url={http://arxiv.org/abs/2510.04201},
+}
+```
