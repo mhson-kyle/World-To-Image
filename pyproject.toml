@@ -3,16 +3,16 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "textgrad-po"
-version = "0.2.0"
-description = "Enhanced Text-to-Image Prompt Optimization with Model Selection and Hyperparameter Tuning"
+name = "world-to-image"
+version = "0.1.0"
+description = "GROUNDING TEXT-TO-IMAGE GENERATION WITH AGENT-DRIVEN WORLD KNOWLEDGE"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
 authors = [
-    {name = "TextGrad-PO Team", email = "team@textgrad-po.org"}
+    {name = "World-To-Image Team", email = "mhson@connect.ust.hk"}
 ]
-keywords = ["text-to-image", "prompt-optimization", "ai", "machine-learning", "diffusion-models"]
+keywords = ["text-to-image", "agents", "world-models", "knowledge-grounding", "multimodal", "generation"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
@@ -39,7 +39,6 @@ dependencies = [
     "tqdm>=4.65.0",
     "pyyaml>=6.0",
     "requests>=2.31.0",
-    "hpsv3>=0.1.0",
     "ftfy",
     "regex",
     "clip @ git+https://github.com/openai/CLIP.git",
@@ -96,7 +95,7 @@ force-sort-within-sections = true
 lines-after-imports = 2
 
 known-first-party = ["src", "configs"]
-known-third-party = ["numpy", "torch", "pandas", "scipy", "diffusers", "transformers", "accelerate", "safetensors", "Pillow","requests", "hpsv3", "ftfy", "regex", "clip", "pytorch-lightning", "matplotlib", "tensorboard", "hpsv2x", "litellm"]
+known-third-party = ["numpy", "torch", "pandas", "scipy", "diffusers", "transformers", "accelerate", "safetensors", "Pillow","requests", "ftfy", "regex", "clip", "pytorch-lightning", "matplotlib", "tensorboard", "hpsv2x", "litellm"]
 section-order = [
     "future",
     "standard-library",
